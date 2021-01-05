@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.tab1Controller">
+   <children>
+      <VBox layoutX="-3.0" prefHeight="800.0" prefWidth="276.0" spacing="15.0" style="-fx-background-color: #2B3856;">
+         <children>
+            <ImageView fitHeight="161.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/clipart18037.png" />
+               </image>
+            </ImageView>
+            <Label prefHeight="27.0" prefWidth="28.0" text="ID" textFill="#f8dddd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="idImmobilier" />
+            <Label layoutX="28.0" layoutY="146.0" prefHeight="27.0" prefWidth="52.0" text="Type" textFill="#f8dddd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="typeImmobilier" layoutX="28.0" layoutY="180.0" />
+            <Label layoutX="28.0" layoutY="212.0" prefHeight="27.0" prefWidth="71.0" text="Surface" textFill="#f8dddd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="surfaceImmobilier" layoutX="28.0" layoutY="246.0" />
+            <Label layoutX="28.0" layoutY="278.0" prefHeight="27.0" prefWidth="66.0" text="Adress" textFill="#f8dddd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="adressImmobilier" layoutX="28.0" layoutY="312.0" />
+            <Label layoutX="28.0" layoutY="344.0" prefHeight="27.0" prefWidth="123.0" text="Prix de Vente" textFill="#f8dddd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prixImmobilier" layoutX="28.0" layoutY="378.0" />
+            <Button mnemonicParsing="false" onAction="#AjouterImmob" style="-fx-background-color: #7BCCB5;" text="Ajouter">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="18.0" right="20.0" />
+         </padding>
+      </VBox>
+      <TableView fx:id="tableImmo" layoutX="285.0" layoutY="106.0" prefHeight="535.0" prefWidth="695.0">
+        <columns>
+          <TableColumn fx:id="tbIdImmo" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tbTypeImmo" prefWidth="161.0" text="Type" />
+            <TableColumn fx:id="tbSurfaceImmo" prefWidth="156.0" text="Surface" />
+            <TableColumn fx:id="tbAdressImmo" prefWidth="175.0" text="Adress" />
+            <TableColumn fx:id="tbPrixImmo" prefWidth="127.0" text="Prix de vente" />
+        </columns>
+      </TableView>
+      <Button layoutX="864.0" layoutY="668.0" mnemonicParsing="false" onAction="#SupprimerImmobilier" style="-fx-background-color: #F75D59;" text="Supprimer">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
